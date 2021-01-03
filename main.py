@@ -1,19 +1,22 @@
 #!/usr/bin/python
     
 from flask import Flask, render_template
-import Adafruit_DHT
+import adafruit_dht
+import board
     
 app = Flask(__name__)
-sensor = Adafruit_DHT.DHT22
-pin = 4
+sensor = adafruit_dht.DHT22(board.D4)
     
 @app.route(“/”)
 def main():
-   humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+   
+   humidity = sensor.humidity
+   temperature = sensor.temperature 
    templateData = {
       ‘temperature’ : temperature,
       ‘humidity’: humidity
    }
+
    return render_template(‘main.html’, **templateData)
      
 if __name__ == “__main__”:
