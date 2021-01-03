@@ -2,10 +2,10 @@
     
 from flask import Flask, render_template
 import adafruit_dht
-import board
     
 app = Flask(__name__)
-sensor = adafruit_dht.DHT11(board.D4)
+pin = 4
+sensor = adafruit_dht.DHT11(pin)
     
 @app.route("/")
 def main():
@@ -20,4 +20,4 @@ def main():
    return render_template('main.html', **templateData)
      
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=80)
