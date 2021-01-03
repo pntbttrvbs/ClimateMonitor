@@ -4,7 +4,8 @@ This is a small Raspberry Pi based project to track the temperature and humidity
 
 
 ## Dependencies
-
-pip3 install flask
-pip3 install adafruit-circuitpython-dht
-sudo apt-get install libgpiod2
+<pre><code>
+$ pip3 install flask
+$ pip3 install adafruit-circuitpython-dht
+$ sudo apt-get install libgpiod2
+</pre></code>
