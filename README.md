@@ -10,7 +10,8 @@ flask should be installed with most python3 distros
 <pre><code>
 $ sudo pip3 install adafruit-circuitpython-dht
 $ sudo apt-get install libgpiod2
-$ sudo
+$ sudo apt-get install -y mariadb-server mariadb-client libmariadbclient-dev
+$sudo pip3 install mysqlclient
 </pre></code>
 
 ## Set up database
