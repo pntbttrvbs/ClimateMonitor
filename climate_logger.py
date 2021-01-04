@@ -17,6 +17,9 @@ def main():
 
 if __name__ == "__main__":
     while True:
-        main()
-        time.sleep(60)
+        try:
+            main()
+            time.sleep(60)
+        except:
+            pass
 
